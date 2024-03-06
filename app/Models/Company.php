@@ -22,4 +22,9 @@ class Company extends Model
     {
         return $this->hasOne(CompanyDesignInfo::class);
     }
+
+    public function info(): HasOne
+    {
+        return $this->hasOne(CompanyDescribingInfo::class);
+    }
 }
