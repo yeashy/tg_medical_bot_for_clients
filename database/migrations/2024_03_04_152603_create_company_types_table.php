@@ -32,6 +32,7 @@ class CreateCompanyTypesTable extends Migration
     public function down()
     {
         Schema::table('companies', function (Blueprint $table) {
+            $table->dropForeign(['company_type_id']);
             $table->dropColumn(['company_type_id']);
         });
         Schema::dropIfExists('company_types');

@@ -14,9 +14,11 @@ class CompanyFactory extends Factory
      */
     public function definition(): array
     {
+        $name = $this->faker->company();
+
         return [
-            'name' => $this->faker->company(),
-            'code_name' => TextTransformHelper::toSnakeCase($this->faker->company),
+            'name' => $name,
+            'code_name' => TextTransformHelper::toSnakeCase($name),
             'bot_token' => $this->faker->creditCardNumber(null, false, ''),
             'company_type_id' => 1
         ];

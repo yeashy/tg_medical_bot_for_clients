@@ -18,7 +18,7 @@ class CompanyDescribingInfoFactory extends Factory
             'phone_number' => $this->faker->phoneNumber(),
             'logo_path' => $this->faker->imageUrl(),
             'address' => $this->faker->address(),
-            'email' => $this->faker->email()
+            'email' => $this->faker->companyEmail()
         ];
     }
 }
